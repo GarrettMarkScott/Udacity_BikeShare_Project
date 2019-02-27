@@ -1,11 +1,11 @@
 ### Date created
-Include the date you created this project and README file.
+February 27th, 2019
 
 ### Project Title
-Replace the Project Title
+Udacity Bike Share Project & Git Final
 
 ### Description
-Describe what your project is about and what it does
+This program will help investigate the usage of City Bike data from Washington, New York City, and Chicago
 
 ### Files used
 Include the files used
