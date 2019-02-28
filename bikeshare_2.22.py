@@ -18,7 +18,7 @@ for city in CITY_DATA.keys():
     #data[['Start Time','End Time']] = data[['Start Time','End Time']].apply(pd.to_datetime)
 print(CITY_DATA['washington'])
 '''
-head_num = 3
+head_num = 99999999999999999
 city_input = 'x'
 month_input = 'x'
 raw_day_input = []
@@ -187,7 +187,7 @@ print('-'*100)
 """ To print a straight line """
 
 df=load_data(city_input,month_input,valid_day_input).head(head_num)
-
+#df
 """This applies the DataFrame Filters from User imput"""
 """Has to be after Funtion so that it can be called"""
 
