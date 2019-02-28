@@ -9,8 +9,16 @@ import re
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
+'''
+How could I preoload each csv file from the dictionary as a loop?
+Err: 'too many values to unpack (expected 2)'
 
-head_num = 3
+for city in CITY_DATA.keys():
+    pd.read_csv(city)
+    #data[['Start Time','End Time']] = data[['Start Time','End Time']].apply(pd.to_datetime)
+print(CITY_DATA['washington'])
+'''
+head_num = 99999999999999999
 city_input = 'x'
 month_input = 'x'
 raw_day_input = []
@@ -20,7 +28,7 @@ calander_months = ['January','February','March','April','May','June','July','Aug
 
 
 def show_raw_data():
-    data_request = input('Would you like to see some of the raw data?')
+    data_request = input('Would you like to see some of the raw data? ')
     row_numbers = 0
     while data_request != 'no':
 
@@ -127,8 +135,7 @@ def get_filters():
 
 #Below print call is for testing
 
-print("The definition returns:",get_filters())
-
+get_filters()
 """
 print("Your city variable is:",city_input)
 print("Your month variable is:",month_input)
@@ -160,6 +167,7 @@ def load_data(city,month,day):
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     """ To get the day_of_week value from start time of original csv"""
 
+
     for d in day:
         if d != 'all':
             """ If selected day is not none in choice then this function will trigger """
@@ -173,7 +181,7 @@ def load_data(city,month,day):
         """ This line filter the numerical month values that are equal """
     else:
         return df
-
+###??? On second pass, if 'All' is selected as month shows all data ???###
 
 #print(load_data(city_input,month_input,valid_day_input).head(head_num))
 print()
@@ -181,7 +189,7 @@ print('-'*100)
 """ To print a straight line """
 
 df=load_data(city_input,month_input,valid_day_input).head(head_num)
-
+#df
 """This applies the DataFrame Filters from User imput"""
 """Has to be after Funtion so that it can be called"""
 
@@ -332,16 +340,11 @@ def reset_user_input():
     raw_day_input = []
     valid_day_input = []
 
-    print(city_input)
-    print(month_input)
-    print(raw_day_input)
-    print(valid_day_input)
-
 
 def main():
     print('\n\n\n')
     print('Thanks for using our program!')
-    u = input('Would you like to restart?')
+    u = input('Would you like to restart? ')
     if u == 'yes':
         print(reset_user_input())
         print(get_filters())
