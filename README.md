@@ -20,7 +20,7 @@ This program will help investigate the usage of City Bike data from Washington, 
 - bikeshare_2.22.py
 
 ### Known Bugs
-1. After telling the program you would like to restart the second pass shows the entire DataFrame when "All" months are selected. This is isolated to just the month selection. If a particular month is chosen (I.E. March) it will work as normal regardless of other user inputs.
+1. After telling the program you would like to restart, the second pass will show the entire DataFrame when "All" months are selected. This is isolated to just the month selection. If a particular month is chosen (I.E. March) it will work as normal regardless of other user inputs.
 2. Washington.csv contains utf-16 text inside the file and panda.read_csv() requires utf-8 to function. 
 
 Both bugs were brought to [Udacity's](udacity.com) attention through the student hub and both project submissions but their staff neglected to help with these issues.
