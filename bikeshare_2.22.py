@@ -134,7 +134,7 @@ def get_filters():
 
 #Below print call is for testing
 
-print("The definition returns:",get_filters())
+get_filters()
 """
 print("Your city variable is:",city_input)
 print("Your month variable is:",month_input)
@@ -337,11 +337,6 @@ def reset_user_input():
     month_input = 'x'
     raw_day_input = []
     valid_day_input = []
-
-    print(city_input)
-    print(month_input)
-    print(raw_day_input)
-    print(valid_day_input)
 
 
 def main():
