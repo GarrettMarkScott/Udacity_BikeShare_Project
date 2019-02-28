@@ -9,15 +9,7 @@ import re
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
-'''
-How could I preoload each csv file from the dictionary as a loop?
-Err: 'too many values to unpack (expected 2)'
 
-for city in CITY_DATA.keys():
-    pd.read_csv(city)
-    #data[['Start Time','End Time']] = data[['Start Time','End Time']].apply(pd.to_datetime)
-print(CITY_DATA['washington'])
-'''
 head_num = 3
 city_input = 'x'
 month_input = 'x'
@@ -37,14 +29,13 @@ def show_raw_data():
         data_request = input('Would you like more raw data? Yes or no. ')
 
 
-
-
 def get_filters():
     #Are these global commands proper? I could not find another solution.
     global city_input
     global month_input
     global raw_day_input
     global valid_day_input
+
     """
     Asks user to specify a city, month, and day to analyze.
 
@@ -53,7 +44,9 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+
     print('Hello! Let\'s explore some US bikeshare data!')
+
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     # Start a loop that will run until the user enters 'quit'.
 
@@ -135,6 +128,7 @@ def get_filters():
 #Below print call is for testing
 
 print("The definition returns:",get_filters())
+
 """
 print("Your city variable is:",city_input)
 print("Your month variable is:",month_input)
