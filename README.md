@@ -5,7 +5,7 @@ February 27th, 2019
 Udacity Bike Share Project & Git Final
 
 ### Description
-This program will help investigate the usage of City Bike data from Washington, New York City, and Chicago
+This program will help investigate the usage of City Bike data from Washington, New York City, and Chicago.
 
 ### Files used
 chicago.csv
