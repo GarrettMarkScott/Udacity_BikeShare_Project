@@ -166,6 +166,8 @@ def load_data(city,month,day):
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     """ To get the day_of_week value from start time of original csv"""
 
+    print('Day Type: ',type(day),'  ',day)
+    print('Month Type: ',type(month),'  ',month)
     for d in day:
         if d != 'all':
             """ If selected day is not none in choice then this function will trigger """
@@ -179,7 +181,7 @@ def load_data(city,month,day):
         """ This line filter the numerical month values that are equal """
     else:
         return df
-
+###??? On second pass, if 'All' is selected as month shows all data ???###
 
 #print(load_data(city_input,month_input,valid_day_input).head(head_num))
 print()
