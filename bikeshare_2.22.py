@@ -28,7 +28,7 @@ calander_months = ['January','February','March','April','May','June','July','Aug
 
 
 def show_raw_data():
-    data_request = input('Would you like to see some of the raw data?')
+    data_request = input('Would you like to see some of the raw data? ')
     row_numbers = 0
     while data_request != 'no':
 
@@ -166,8 +166,7 @@ def load_data(city,month,day):
     df['day_of_week'] = df['Start Time'].dt.weekday_name
     """ To get the day_of_week value from start time of original csv"""
 
-    print('Day Type: ',type(day),'  ',day)
-    print('Month Type: ',type(month),'  ',month)
+
     for d in day:
         if d != 'all':
             """ If selected day is not none in choice then this function will trigger """
@@ -344,7 +343,7 @@ def reset_user_input():
 def main():
     print('\n\n\n')
     print('Thanks for using our program!')
-    u = input('Would you like to restart?')
+    u = input('Would you like to restart? ')
     if u == 'yes':
         print(reset_user_input())
         print(get_filters())
